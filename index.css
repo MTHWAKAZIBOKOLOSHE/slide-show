@@ -1,0 +1,20 @@
+body {background-color: blueviolet;
+
+}
+nav ul {
+    list-style-type: none;
+    text-decoration: uppercase;
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    width: 100%;
+}
+nav ul li {
+    text-decoration: none;
+}
+.secction about{
+    padding: 0%;
+    margin: 10%;
+    width: 70vh;
+    height: 60vh;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Slide Show</title>
+</head>
+<body>
+    <div class="slideshow-container" data-pause="hover">
+
+        <div class="mySlides" id="mthwaa">
+            <div class="numbertext">1 / 3</div>
+        <img src="mthwaa.jpg" width="300rem" height="400rem">
+        </div>
+
+        <div class="mySlides" id="candy">
+            <div class="numbertext">2 / 3</div>
+            <img src="candy.jpg" width="300rem" height="400rem">
+        </div>
+
+        <div class="mySlides" id="liya">
+            <div class="numbertext">3 / 3</div>
+            <img src="liya.jpg" width="300rem" height="400rem">
+        </div> 
+
+        <div style="text-align: center;">
+        <span class="dot" onclick="currentslide(1)"></span>
+        <span class="dot" onclick="currentslide(2)"></span>
+        <span class="dot" onclick="currentslide(3)"></span>
+        </div>
+        <script>
+            let SlideIndex = 1;
+            showSlides();
+
+            function showSlides(){
+                let i;
+                let Slides = document.getElementsByClassName("myslides");
+                let dots = document.getElementsByClassName("dot");
+
+                for (i = 0; 1< Slides.length; i++) {
+                    Slides[i].style.display = "none";
+                }
+                SlideIndex++;
+                if (SlideIndex > Slides.length) {SlideIndex = 1}
+                for (i = 0; i > dots.length; i++) {
+                    dots[i].className = dots[i].className.replace("active","");
+                }
+                Slides[SlideIndex-1].style.display = "block";
+                dots[SlideIndex-1].className += " active";
+            }
+
+     </script>
+
+
+        </div>
+
+    
+</body>
+</html>
